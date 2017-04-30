@@ -18,17 +18,15 @@
 <script type="text/javascript" src="js/myriad.js"></script>
 <script type="text/javascript" src="js/jquery.colorbox.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="data/info.js"></script>
 <script type="text/javascript">
-		Cufon.replace('h1,h2');
-		$(function(){
-			$.getJSON("info.json",function(data){
-				console.log("ooooooo");
-				$.each(data,function(key,val){
-					console.log(key+"--"+val);
-				})
-			});
-			
-		});
+Cufon.replace('h1,h2');
+function loadData(data){
+	$(".name").html(data.name);
+}
+$(function(){
+	loadData(data);
+});
 </script>
 </head>
 <body>
