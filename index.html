@@ -20,6 +20,15 @@
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript">
 		Cufon.replace('h1,h2');
+		$(function(){
+			$.getJSON("info.json",function(data){
+				console.log("ooooooo");
+				$.each(data,function(key,val){
+					console.log(key+"--"+val);
+				})
+			});
+			
+		});
 </script>
 </head>
 <body>
